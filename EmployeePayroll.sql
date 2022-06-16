@@ -36,4 +36,12 @@ select salary from employee_payroll where name = 'John';
 -- getdate() used to get current date
 select * from employee_payroll where startDate between CAST('2018-01-01' AS DATE) and GETDATE();
 
--- UC6 
+-- UC6
+-- Alter table
+alter table employee_payroll add gender char(1);
+
+-- updating each row
+update employee_payroll set gender = 'M' where name = 'John' or name = 'Lokesh' or name = 'Vikram';
+
+update employee_payroll set gender = 'F' where name = 'Mina' or name = 'Isha';
+
