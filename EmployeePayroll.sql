@@ -89,3 +89,22 @@ where name = 'Isha';
 
 select * from employee_payroll;
 
+
+alter table employee_payroll alter column salary float;
+-- UC9 Extend pays
+
+-- changing salary column name to base_pay
+Exec sp_rename 'employee_payroll.salary', 'base_pay', 'COLUMN';
+
+alter table employee_payroll add deductions float, taxable_pay float, income_tax float, net_pay float
+
+update employee_payroll set deductions = 100, taxable_pay = 1000, net_pay = base_pay - 500, income_tax = (0.12)*base_pay where name = 'John';
+
+update employee_payroll set deductions = 100, taxable_pay = 1000, net_pay = base_pay - 600, income_tax = (0.15)*base_pay where name = 'Lokesh';
+
+update employee_payroll set deductions = 100, taxable_pay = 1000, net_pay = base_pay - 700, income_tax = (0.16)*base_pay where name = 'Vikram';
+
+update employee_payroll set deductions = 100, taxable_pay = 1000, net_pay = base_pay - 650, income_tax = (0.14)*base_pay where name = 'Mina';
+
+update employee_payroll set deductions = 100, taxable_pay = 1000, net_pay = base_pay - 650, income_tax = (0.14)*base_pay where name = 'Isha';
+
