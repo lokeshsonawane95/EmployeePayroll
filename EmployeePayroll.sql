@@ -21,7 +21,9 @@ startDate date not null
 insert into employee_payroll values
 ('John', 30000, '1991-02-04'),
 ('Lokesh', 40000, '2022-04-05'),
-('Vikram', 50000, '2020-07-09');
+('Vikram', 50000, '2020-07-09'),
+('Mina', 45000, '2021-04-05'),
+('Isha', 49000, '2019-04-05');
 
 -- UC4 Retrieve all data we have inserted into employee_payroll
 select * from employee_payroll;
@@ -31,4 +33,7 @@ select * from employee_payroll;
 select salary from employee_payroll where name = 'John';
 
 -- where condition for data
+-- getdate() used to get current date
 select * from employee_payroll where startDate between CAST('2018-01-01' AS DATE) and GETDATE();
+
+-- UC6 
