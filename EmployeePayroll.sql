@@ -108,3 +108,7 @@ update employee_payroll set deductions = 100, taxable_pay = 1000, net_pay = base
 
 update employee_payroll set deductions = 100, taxable_pay = 1000, net_pay = base_pay - 650, income_tax = (0.14)*base_pay where name = 'Isha';
 
+-- UC10 Adding duplicate names
+
+insert into employee_payroll 
+values('John', 44000, '2020-04-22', 'M', 9513264780, 'Mumbai', 'Marketing', 2000, 1000, 200, 18000);
