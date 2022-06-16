@@ -59,3 +59,33 @@ select min(salary) as "Lowest_Salary" from employee_payroll;
 
 select max(salary) "Highest_Salary" from employee_payroll;
 
+
+-- UC8 Extend employee_payroll
+alter table employee_payroll add phone bigint;
+
+alter table employee_payroll add address varchar(300) default 'Pune';
+
+alter table employee_payroll add department varchar(100) not null default 'Testing';
+
+update employee_payroll
+set phone = 9876543210, address = 'Bangaluru', department = 'HR'
+where name = 'John';
+
+update employee_payroll
+set phone = 9875913210, address = 'Pune', department = 'IT'
+where name = 'Lokesh';
+
+update employee_payroll
+set phone = 9875945610, address = 'Pune', department = 'IT'
+where name = 'Mina';
+
+update employee_payroll
+set phone = 9875913329, address = 'Bangaluru', department = 'Marketing'
+where name = 'Vikram';
+
+update employee_payroll
+set phone = 9874113210, address = 'Bangaluru'
+where name = 'Isha';
+
+select * from employee_payroll;
+
