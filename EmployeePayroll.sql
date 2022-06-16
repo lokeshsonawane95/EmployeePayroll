@@ -16,3 +16,9 @@ salary int not null,
 -- startDate stores date which is not null
 startDate date not null
 );
+
+-- UC3 Insert data into table employee_payroll
+insert into employee_payroll values
+('John', 30000, '1991-02-04'),
+('Lokesh', 40000, '2022-04-05'),
+('Vikram', 50000, '2020-07-09');
