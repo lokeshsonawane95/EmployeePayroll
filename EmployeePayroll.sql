@@ -30,7 +30,7 @@ select * from employee_payroll;
 
 -- UC5
 -- Rettrieve data of a particular employee
-select salary from employee_payroll where name = 'John';
+select base_pay from employee_payroll where name = 'John';
 
 -- where condition for data
 -- getdate() used to get current date
@@ -47,17 +47,17 @@ update employee_payroll set gender = 'F' where name = 'Mina' or name = 'Isha';
 
 -- UC7 use aggregate functions
 
-select gender, sum(salary) from employee_payroll where gender = 'M' group by gender;
+select gender, sum(base_pay) from employee_payroll where gender = 'M' group by gender;
 
-select gender, avg(salary) from employee_payroll where gender = 'F' group by gender;
+select gender, avg(base_pay) from employee_payroll where gender = 'F' group by gender;
 
-select gender, avg(salary) from employee_payroll group by gender;
+select gender, avg(base_pay) from employee_payroll group by gender;
 
 select gender, count(*) from employee_payroll group by gender;
 
-select min(salary) as "Lowest_Salary" from employee_payroll;
+select min(base_pay) as "Lowest_Salary" from employee_payroll;
 
-select max(salary) "Highest_Salary" from employee_payroll;
+select max(base_pay) "Highest_Salary" from employee_payroll;
 
 
 -- UC8 Extend employee_payroll
