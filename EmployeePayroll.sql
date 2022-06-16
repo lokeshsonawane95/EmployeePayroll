@@ -23,3 +23,12 @@ insert into employee_payroll values
 ('Lokesh', 40000, '2022-04-05'),
 ('Vikram', 50000, '2020-07-09');
 
+-- UC4 Retrieve all data we have inserted into employee_payroll
+select * from employee_payroll;
+
+-- UC5
+-- Rettrieve data of a particular employee
+select salary from employee_payroll where name = 'John';
+
+-- where condition for data
+select * from employee_payroll where startDate between CAST('2018-01-01' AS DATE) and GETDATE();
