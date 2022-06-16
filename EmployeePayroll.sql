@@ -22,3 +22,4 @@ insert into employee_payroll values
 ('John', 30000, '1991-02-04'),
 ('Lokesh', 40000, '2022-04-05'),
 ('Vikram', 50000, '2020-07-09');
+
